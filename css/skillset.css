@@ -1,0 +1,106 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("../Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("../Fonts/GTWalsheimPro-Light.woff");
+}
+
+#skillsetDiv{
+    display: flex;
+    align-items: center;
+    padding: 75px 0 0 0 ;
+}
+
+#skillset{
+    color: #5f99ff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+#graphicTitle{
+    color: white;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+#processes{
+    text-decoration: none;
+    font-family: GTWalsheimProLight;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border-bottom: 1px solid #5f99ff;
+    padding: 15px 20px 15px 0px;
+    font-size: 14px;
+    transition: .25s;
+    transition-delay: .1s;
+}
+
+#processes:hover{
+    background-color: #5f9aff16;
+    padding-left: 10px;
+}
+
+#skillsetParagraphLG{
+    color: #999999;
+    font-size: 1.1em;
+    letter-spacing: 0.2px;
+    font-family: GTWalsheimProLight;
+    text-align: justify;
+    line-height: 26px;
+}
+
+#skillsetParagraphSM{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 800px){
+
+    #skillsetDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    #skillset{
+        text-align: center;
+    }
+
+    #graphicTitle{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    #skillsetParagraphSM{
+        visibility: visible;
+        color: #999999;
+        font-size: 1.1em;
+        letter-spacing: 0.2px;
+        font-family: GTWalsheimProLight;
+        text-align: justify;
+        line-height: 26px;
+        margin-top: 50px;
+    }
+
+    #skillsetParagraphLG{
+        display: none;
+    }
+
+    #link-container {
+        text-align: center;
+    }
+
+    #processes{
+        text-align: center !important;
+        margin: auto;
+        font-size: 12px;
+        padding: 10px 15px 10px 0px;
+        display: inline-block;
+    }
+}

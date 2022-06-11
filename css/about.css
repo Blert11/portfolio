@@ -1,0 +1,142 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("../Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("../Fonts/GTWalsheimPro-Light.woff");
+}
+
+#aboutDiv {
+    margin-top: 150px;
+    position: relative;
+    padding: 75px 0 0px 0 ;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-background {
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 401px;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.99) 75%);
+}
+
+video.fullscreen {
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    display: flex;
+    align-items: center;
+}
+
+video.fullscreen::-webkit-media-controls {
+    display: none !important;
+}
+
+#about {
+    color: #5f99ff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
+    z-index: 9;
+}
+
+#designingTitle {
+    color: white;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 47px;
+    margin: 50px 0;
+    letter-spacing: 1px;
+}
+
+#follow {
+    text-decoration: none;
+    font-family: GTWalsheimProLight;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border-bottom: 1px solid #5f99ff;
+    padding: 15px 20px 15px 0px;
+    font-size: 14px;
+    transition: .25s;
+    transition-delay: .1s;
+}
+
+#follow:hover {
+    background-color: #5f9aff16;
+    padding-left: 10px;
+}
+
+#videoParagraphLG {
+    color: #999999;
+    font-size: 1.1em;
+    letter-spacing: 0.2px;
+    font-family: GTWalsheimProLight;
+    text-align: justify;
+    line-height: 26px;
+}
+
+#videoParagraphSM {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    #aboutDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0 !important;
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #designingTitle {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    #videoParagraphSM {
+        visibility: visible;
+        color: #999999;
+        font-size: 1.1em;
+        letter-spacing: 0.2px;
+        font-family: GTWalsheimProLight;
+        text-align: justify;
+        line-height: 26px;
+        margin-top: 50px;
+    }
+
+    #videoParagraphLG {
+        display: none;
+    }
+
+    #link-container {
+        text-align: center;
+    }
+
+    #follow {
+        text-align: center !important;
+        margin: auto;
+        font-size: 12px;
+        padding: 10px 15px 10px 0px;
+        display: inline-block;
+    }
+}

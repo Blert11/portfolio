@@ -1,0 +1,84 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("../Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("../Fonts/GTWalsheimPro-Light.woff");
+}
+
+#processTitle{
+    color: white;
+    font-size: 51.8px;
+    font-family: GTWalsheimProCondensedBold;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+#processesDiv{
+    padding: 0px 0 75px ;
+}
+
+.processes-div{
+    position: relative;
+}
+
+.processes-div-2{
+    top: 75px;
+}
+
+.processes-div span{
+    color: #1A1919;
+    font-size: 90px;
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    z-index: -1;
+    font-family: GTWalsheimProCondensedBold;
+}
+
+.processes-div h1{
+    color: white;
+    font-family: GTWalsheimProCondensedBold;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+.processes-div ul{
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 30px;
+}
+
+.processes-div ul li{
+    font-family: GTWalsheimProLight;
+    color: white;
+    font-size: 18px;
+    margin: 17px 0;
+}
+
+@media screen and (max-width: 800px){
+    #processesDiv{
+        padding: 75px 0;
+    }
+    .processes-div-2{
+        top: 0;
+    }
+
+    .processes-div{
+        margin: 75px 0;
+    }
+
+    .processes-div span{
+        font-size: 80px;
+    }
+
+    .processes-div h1{
+        font-size: 20px;
+    }
+
+    .processes-div ul li{
+        font-size: 16px;
+    }
+}
