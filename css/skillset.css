@@ -11,7 +11,7 @@
 #skillsetDiv{
     display: flex;
     align-items: center;
-    padding: 75px 0 0 0 ;
+    padding: 75px 0;
 }
 
 #skillset{
@@ -57,7 +57,7 @@
 }
 
 #skillsetParagraphSM{
-    visibility: hidden;
+    display: none;
 }
 
 @media screen and (max-width: 800px){
@@ -79,7 +79,7 @@
     }
 
     #skillsetParagraphSM{
-        visibility: visible;
+        display: block;
         color: #999999;
         font-size: 1.1em;
         letter-spacing: 0.2px;

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("../Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("../Fonts/GTWalsheimPro-Light.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProBold;
+    src: url("../Fonts/GTWalsheimPro-Regular.woff");
+}
+
+#footerDiv {
+    padding: 25px 0 75px ;
+    text-align: center;
+}
+
+#whatsNext {
+    color: #5f99ff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+#letsWork {
+    font-family: GTWalsheimProCondensedBold;
+    color: white;
+    font-size: 40px;
+}
+
+#ifYou {
+    color: #999999;
+    font-size: 1.1em;
+    letter-spacing: 0.2px;
+    font-family: GTWalsheimProLight;
+    text-align: center;
+    line-height: 26px;
+    width: 60%;
+    margin: auto;
+}
+
+#ifYou strong{
+    font-family: GTWalsheimProBold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+#write {
+    text-decoration: none;
+    font-family: GTWalsheimProLight;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border-bottom: 1px solid #5f99ff;
+    padding: 15px 20px 15px 0px;
+    font-size: 13px;
+    transition: .25s;
+    transition-delay: .1s;
+    position: relative;
+    top: 25px;
+}
+
+#write:hover {
+    background-color: #5f9aff16;
+    padding-left: 10px;
+}
+
+#footerFund{
+    padding: 75px 0 30px;
+}
+
+#tekstLogo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#built{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff63;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 13px;
+}
+
+#logoFooter{
+    width: 12rem;
+}
+
+@media screen and (max-width: 800px){
+    #letsWork{
+        font-size: 35px;
+    }
+
+    #ifYou{
+        width: 100%;
+    }
+}

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/processes.css">
     <link rel="stylesheet" href="./css/projects.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Javascripts -->
@@ -81,7 +82,7 @@
                                 <span>Kosovo<span style="color: #5f99ff">.</span></span>
                             </h1>
                         </div>
-                        <a href="#skillsetDiv" id="ScrollDown"><span><i class="fas fa-chevron-down"></i></span> &nbsp;
+                        <a id="ScrollDown"><span><i class="fas fa-chevron-down"></i></span> &nbsp;
                             scroll
                             down</a>
                     </div>
@@ -146,7 +147,7 @@
                 <div class="col-lg-10 col-md-10 col-10" style="display: inline-block;">
 
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-6 processes-div">
+                        <div class="col-lg-4 col-md-4 col-6 processes-div text-left">
                             <span>01</span>
                             <h1>Pre-Process</h1>
                             <ul>
@@ -279,7 +280,7 @@
 
         </div>
 
-        <div class="container" id="aboutDiv">
+        <div class="container align-items-center" id="aboutDiv">
 
             <div class="video-background"></div>
 
@@ -331,14 +332,40 @@
 
         </div>
 
+        <div class="container" id="footerDiv">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-1"></div>
+                <div class="col-lg-10 col-md-10 col-10">
+                    <p id="whatsNext">What's next?</p>
+                    <h1 id="letsWork">Let's work together<span style="color: #5f99ff;">.</span></h1>
+                    <p id="ifYou">If you'd like to talk about a project you want help with or need an advice about
+                        product design,
+                        just drop me a message at <strong>blertana05@gmail.com</strong>. <br>
+                        I'm currently Available for any design systems projects, dashboard designs, graphic designs,
+                        social media management or landing pages
+                        gigs.</p>
+                    <div id="link-container">
+                        <a href="mailto: blertana05@gmail.com" id="write">Write me an email&nbsp; <strong><i class="fa-solid fa-envelope"></i></strong></a>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-1"></div>
+            </div>
+        </div>
+
+        <div class="container" id="footerFund">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10" id="tekstLogo">
+                    <p id="built">BUILT FROM SCRATCH BY ME :)</p>
+                    <img id="logoFooter" src="/images/Logos/LogoFooter.png" alt="">
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+
     </div>
 
     <script>
-
-        $(document).ready(function () {
-            $(window).scrollTop(0);
-        });
-
 
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -356,6 +383,7 @@
 
             setTimeout(() => { closeLoadingScreen(lscreen) }, 5000); // FOR DEMO
         }
+
     </script>
 </body>
 
