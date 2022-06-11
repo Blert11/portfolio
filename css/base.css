@@ -2,12 +2,12 @@
     font-family: GTWalsheimPro;
     src: url("../Fonts/GTWalsheimPro-Regular.woff");
 }
- 
+
 * {
     font-family: GTWalsheimPro;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,27 +16,93 @@ body{
     width: 100vw;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
+    z-index: 50000 !important;
 }
-  
-  /* Track */
-::-webkit-scrollbar-track { 
+
+/* Track */
+::-webkit-scrollbar-track {
     border-radius: 10px;
 }
-   
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: white; 
+    background: white;
     border-radius: 50px;
     border: 3px solid black;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #999; 
+    background: #999;
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-screen {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 50000000 !important;
+    cursor: none;
+}
+
+.spinner {
+    width: 175px !important;
+    height: 175px !important;
+    background: linear-gradient(180deg, #5f99ff 0%, rgba(0, 0, 0, 0.1) 25%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 2s cubic-bezier(.52, .1, .27, .87) infinite;
+    position: relative;
+}
+
+.spinner::after {
+    content: "";
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 50%;
+    background: black;
+    z-index: 01;
+}
+
+.spinner-container img {
+    height: calc(140px / 100 * 75);
+    width: calc(140px / 100 * 75);
+    border-radius: 50%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 02;
+    object-position: center;
+}
+
+.loading-screen p {
+    font-family: var(--font-family, sans-serif);
+    color: var(--text-color, white);
+    opacity: .5;
+    font-weight: 300;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }

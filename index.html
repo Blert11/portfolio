@@ -44,6 +44,13 @@
 
 <body>
 
+    <div class="loading-screen" id="loading-screen">
+        <div class="spinner-container">
+            <img src="/images/Logos/PNGLogoBlertBardh.png" />
+            <div class="spinner"></div>
+        </div>
+    </div>
+
     <div>
 
         <div class="container" id="navbar">
@@ -285,7 +292,7 @@
 
             <video class="fullscreen" src="./images/BinaryVideo/Video.mp4" playsinline autoplay muted loop></video>
 
-            <div class="row">
+            <div class="row" id="aboutDivVideo">
                 <div class="col-lg-1 col-md-1 col-1"></div>
 
                 <div class="col-lg-5 col-md-5 col-10">
@@ -334,6 +341,12 @@
     </div>
 
     <script>
+
+        $(window).on('unload', function () {
+            $(window).scrollTop(0);
+        });
+
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 50,
@@ -342,6 +355,26 @@
                 clickable: true,
             },
         });
+
+        function closeLoadingScreen(loadingScreen) {
+            loadingScreen.style.transitionDuration = ".5s";
+            loadingScreen.style.transitionTimingFunction = "cubic-bezier(0,.75,.25,1)";
+            loadingScreen.style.opacity = 0;
+            loadingScreen.style.borderRadius = "40px";
+            loadingScreen.style.transform = "scale(0.75)";
+            loadingScreen.style.cursor = "initial";
+            setTimeout(() => {
+                loadingScreen.parentNode.removeChild(loadingScreen);
+            }, 500)
+        }
+
+        document.body.onload = () => {
+            lscreen = document.getElementById("loading-screen");
+
+            // load any data and call the function "closeLoadingScreen(lscreen)"
+
+            setTimeout(() => { closeLoadingScreen(lscreen) }, 5000); // FOR DEMO
+        }
     </script>
 </body>
 
