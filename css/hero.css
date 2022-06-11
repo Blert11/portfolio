@@ -1,33 +1,45 @@
-#LandingPage{
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("../Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("../Fonts/GTWalsheimPro-Light.woff");
+}
+
+#LandingPage {
     margin: 0;
     width: 100%;
     height: 75vh;
 }
 
-#LandingPageText{
+#LandingPageText {
     margin-top: 25%;
 }
 
 @keyframes slideInLeft {
     0% {
-      transform: translateY(-200%);
-      opacity: 0;
+        transform: translateY(-200%);
+        opacity: 0;
     }
-    80%{
+
+    80% {
         opacity: 0.0;
     }
+
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-#EmriLanding{
+#EmriLanding {
     color: lightgrey;
     font-size: 20px;
     animation: 3s ease-out 0s 1 slideInLeft;
     cursor: text !important;
-    
+
 }
 
 #WDesigner {
@@ -38,6 +50,7 @@
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     z-index: 11;
     letter-spacing: 1px;
+    font-family:  GTWalsheimProCondensedBold;
     cursor: text !important;
 }
 
@@ -102,39 +115,93 @@ span:nth-child(10) {
 }
 
 @-webkit-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
-	40% {-webkit-transform: translateY(-10px);}
-	60% {-webkit-transform: translateY(-5px);}
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-10px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-5px);
+    }
 }
- 
+
 @-moz-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-	40% {-moz-transform: translateY(-10px);}
-	60% {-moz-transform: translateY(-5px);}
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-10px);
+    }
+
+    60% {
+        -moz-transform: translateY(-5px);
+    }
 }
- 
+
 @-o-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-	40% {-o-transform: translateY(-10px);}
-	60% {-o-transform: translateY(-5px);}
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -o-transform: translateY(0);
+    }
+
+    40% {
+        -o-transform: translateY(-10px);
+    }
+
+    60% {
+        -o-transform: translateY(-5px);
+    }
 }
+
 @keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-10px);}
-	60% {transform: translateY(-5px);}
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes slideInBottom {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
 
-#ScrollDown{
+#ScrollDown {
     position: absolute;
     bottom: 20px;
     color: lightgray;
@@ -144,41 +211,41 @@ span:nth-child(10) {
     transition: .25s;
 }
 
-#ScrollDown:hover{
+#ScrollDown:hover {
     color: white;
 }
 
-#ScrollDown span i{
+#ScrollDown span i {
     animation: bounce 2s infinite;
-	-webkit-animation: bounce 2s infinite;
-	-moz-animation: bounce 2s infinite;
-	-o-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
 }
 
-#Experiences{
+#Experiences {
     margin: 50px 0;
     color: #00071c;
     font-size: 25px;
 }
 
-#Experiences span{
+#Experiences span {
     color: #00071c;
     font-weight: bolder;
 }
 
-#LogoLanding{
+#LogoLanding {
     position: absolute;
     right: -25%;
     width: 50%;
     opacity: 1% !important;
 }
 
-@media screen and (max-width: 800px){
-    #WDesigner{
+@media screen and (max-width: 800px) {
+    #WDesigner {
         font-size: 28px;
     }
 
-    #LandingPageText{
+    #LandingPageText {
         margin-top: 75%;
     }
 }
