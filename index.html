@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=0;" />
+    <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Blert Anadolli</title>
 
     <!-- Styles -->
@@ -34,22 +39,10 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- media -->
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="user-scalable=0;" />
-    <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
 
 </head>
 
 <body>
-
-    <div class="loading-screen" id="loading-screen">
-        <div class="spinner-container">
-            <img src="/images/Logos/PNGLogoBlertBardh.png" />
-            <div class="spinner"></div>
-        </div>
-    </div>
 
     <div>
 
@@ -342,7 +335,7 @@
 
     <script>
 
-        $(window).on('unload', function () {
+        $(document).ready(function () {
             $(window).scrollTop(0);
         });
 
@@ -355,18 +348,6 @@
                 clickable: true,
             },
         });
-
-        function closeLoadingScreen(loadingScreen) {
-            loadingScreen.style.transitionDuration = ".5s";
-            loadingScreen.style.transitionTimingFunction = "cubic-bezier(0,.75,.25,1)";
-            loadingScreen.style.opacity = 0;
-            loadingScreen.style.borderRadius = "40px";
-            loadingScreen.style.transform = "scale(0.75)";
-            loadingScreen.style.cursor = "initial";
-            setTimeout(() => {
-                loadingScreen.parentNode.removeChild(loadingScreen);
-            }, 500)
-        }
 
         document.body.onload = () => {
             lscreen = document.getElementById("loading-screen");
