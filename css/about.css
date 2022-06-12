@@ -100,12 +100,17 @@ video.fullscreen::-webkit-media-controls {
 }
 
 @media screen and (max-width: 800px) {
+    #footerDiv{
+        margin-top: 50px;
+    }
+    
     #aboutDiv {
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 75px 0 !important;
+        padding: 10px 0 !important;
+        margin-top: -50px;
     }
 
     #about {
@@ -132,8 +137,9 @@ video.fullscreen::-webkit-media-controls {
         display: none;
     }
 
-    #link-container {
+    #link-container-instagram {
         text-align: center;
+        padding: 10px;
     }
 
     #follow {

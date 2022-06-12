@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 800px){
     #processesDiv{
-        padding: 75px 0;
+        padding: 50px 0 0 0;
     }
     .processes-div-2{
         top: 0;

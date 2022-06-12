@@ -122,6 +122,7 @@
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
     #projectsDiv {
         padding: 0;
+        margin-top: -400px;
     }
 
     .carousel {
@@ -129,7 +130,7 @@
     }
 
     .carousel .item .imageContainer {
-        height: 500px;
+        height: 400px;
     }
 
     .carousel .item .overlay {
@@ -145,7 +146,7 @@
     }
 
     .carousel .item img {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -167,11 +168,11 @@
     }
 
     .carousel .item .imageContainer {
-        height: 500px;
+        height: 400px;
     }
 
     .carousel .item img {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -206,11 +207,11 @@
     }
 
     .carousel .item .imageContainer {
-        height: 500px;
+        height: 400px;
     }
 
     .carousel .item img {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -226,11 +227,11 @@
     }
 
     .carousel .item .imageContainer {
-        height: 500px;
+        height: 400px;
     }
 
     .carousel .item img {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -242,10 +243,10 @@
     }
 
     .carousel .item .imageContainer {
-        height: 500px;
+        height: 400px;
     }
 
     .carousel .item img {
-        height: 500px;
+        height: 400px;
     }
 }

@@ -76,7 +76,7 @@
 
     #graphicTitle{
         text-align: center;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     #skillsetParagraphSM{
@@ -96,6 +96,7 @@
 
     #link-container {
         text-align: center;
+        margin-top: -50px;
     }
 
     #processes{
