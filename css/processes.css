@@ -32,8 +32,8 @@
     color: #1A1919;
     font-size: 90px;
     position: absolute;
-    top: -20px;
-    left: -25px;
+    top: 00px;
+    left: 0px;
     z-index: -1;
     font-family: GTWalsheimProCondensedBold;
 }
@@ -43,11 +43,14 @@
     font-family: GTWalsheimProCondensedBold;
     letter-spacing: 1px;
     font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 25px;
 }
 
 .processes-div ul{
     list-style: none;
-    margin-left: -40px;
+    margin-left: -15px;
     margin-top: 30px;
 }
 

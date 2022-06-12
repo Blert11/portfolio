@@ -11,7 +11,7 @@
 #LandingPage {
     margin: 0;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
 }
 
 #LandingPageText {
@@ -241,6 +241,10 @@ span:nth-child(10) {
 }
 
 @media screen and (max-width: 800px) {
+    #LandingPage{
+        height: 100vh ;
+    }
+    
     #WDesigner {
         font-size: 28px;
     }

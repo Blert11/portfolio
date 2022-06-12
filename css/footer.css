@@ -62,6 +62,7 @@
     transition-delay: .1s;
     position: relative;
     top: 25px;
+    overflow-x: hidden !important;
 }
 
 #write:hover {
@@ -99,5 +100,30 @@
 
     #ifYou{
         width: 100%;
+    }
+
+    #link-container{
+        padding: 50px;
+        overflow-x: hidden !important;
+    }
+
+    #tekstLogo{
+        display: block !important;
+        text-align: center;
+    }
+
+    #write{
+        height: 100%;
+        overflow-x: hidden !important;
+    }
+
+    #built{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #logoFooter{
+        margin-top: 20px;
     }
 }

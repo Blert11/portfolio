@@ -12,104 +12,240 @@
     padding: 100px 0 75px;
 }
 
-.swiper {
+.carousel {
     width: 100%;
-    height: 450px;
-    border-radius: 15px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: grab;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+.carousel .item {
     position: relative;
+}
+
+.carousel .item .imageContainer {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 20px;
 }
 
-.swiper-slide a img {
+.carousel .item .imageContainer:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: red;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0.75)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#bf000000', GradientType=0);
+    border-radius: 20px !important;
+    /* IE6-9 */
+}
+
+.slick-dots li button:before {
+    color: white !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #5f99ff !important;
+}
+
+.carousel .item img {
     display: block;
-    height: 450px;
-    width: 100% !important;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
     object-fit: cover;
     object-position: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    border-radius: 19px;
 }
 
-.swiper-slide a strong {
-    font-family: GTWalsheimProCondensedBold;
+.carousel .item .overlay {
+    z-index: 999;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: #fff;
+    padding: 30px 0px 70px 0px;
+    text-align: center;
+}
+
+.carousel .item .overlay a {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
     color: white;
-    position: absolute;
-    bottom: 60px;
-    left: 60px;
-    text-align: left;
-    font-size: 30px;
+    text-decoration: none;
+    margin: auto;
+    padding-left: 20px;
+    font-family: GTWalsheimProCondensedBold;
+    transition: .25s all ease;
     letter-spacing: 2px;
-    border-left: 4px solid #5f99ff;
-    padding-left: 15px;
-    transition: all ease 0.2s;
 }
 
-.swiper-slide a strong:hover{
-    padding-left: 25px;
+.carousel .item .overlay a:hover {
     color: #5f99ff;
 }
 
-.overlayer{
-    height: 450px;
-    width: 100%;
+.carousel .slick-dots {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.3) , rgba(0, 0, 0, 0));
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
 }
 
-.swiper-pagination-bullet-active{
-    background-color: rgb(210, 210, 210) !important;
+.slick-dots li button:before {
+    color: #fff;
 }
 
-.swiper-pagination-bullet{
-    border: 1px solid grey;
+.slick-dots li.slick-active button:before {
+    color: #5f99ff;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
     #projectsDiv {
         padding: 0;
     }
 
-    .project-box {
-        height: 250px;
+    .carousel {
+        height: 500px;
     }
 
-    .p-overlayer strong {
-        font-size: 20px;
+    .carousel .item .imageContainer {
+        height: 500px;
     }
 
-    .swiper{
-        height: 400px !important;
-        object-fit: cover;
-        object-position: center;
+    .carousel .item .overlay {
+        padding-bottom: 55px;
     }
 
-    .swiper-slide a strong{
-        position: absolute;
-        bottom: 50px;
-        left: 30px;
+    .carousel .item .overlay a {
+        width: 80%;
         font-size: 25px;
+        line-height: 40px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .carousel .item img {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 900px) {
+    #projectsDiv {
+        padding: 0;
+    }
+
+    .carousel .item .overlay {
+        padding-bottom: 50px;
+    }
+
+    .carousel .item .overlay a {
+        width: 80%;
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .carousel .item .imageContainer {
+        height: 500px;
+    }
+
+    .carousel .item img {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .carousel .item .overlay {
+        position: relative;
+        background: inherit;
+        color: white;
+        padding: 25px 20px 40px 20px;
+    }
+
+    .carousel .item .overlay a {
+        width: 100%;
+        text-align: left;
+        color: white;
+        font-size: 25px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .carousel .slick-dots {
+        bottom: -15px;
+        left: 8px;
+    }
+
+    .slick-dots li button:before {
+        color: white !important;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: white !important;
+    }
+
+    .carousel .item .imageContainer {
+        height: 500px;
+    }
+
+    .carousel .item img {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .carousel .item .overlay {
+        padding: 15px 15px 40px 15px;
+    }
+
+    .carousel .item .overlay h3 {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    .carousel .item .imageContainer {
+        height: 500px;
+    }
+
+    .carousel .item img {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .carousel .item .overlay a {
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .carousel .item .imageContainer {
+        height: 500px;
+    }
+
+    .carousel .item img {
+        height: 500px;
     }
 }

@@ -21,12 +21,14 @@
     <link rel="stylesheet" href="./css/projects.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css">
 
     <!-- Javascripts -->
     <script src="/js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
 
     <!-- Icon -->
     <link rel="icon" href="./images/Logos/LogoBlertRreth.png">
@@ -234,45 +236,54 @@
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-1"></div>
                 <div class="col-lg-10 col-md-10 col-10">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <img src="/images/Projects/TaxiBeka/TaxiBekaWebsite.png" alt="">
-                                    <div class="overlayer"></div>
-                                    <strong>Radio Taxi Beka</strong>
-                                </a>
+                    <div class="carousel">
+
+                        <div class="item">
+                            <div class="imageContainer">
+                                <img src="/images/Projects/TaxiBeka/TaxiBekaWebsite.png" />
                             </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <img src="/images/Projects/Bridal Garden/BridalGardenLogoCarousel.png" alt="">
-                                    <div class="overlayer"></div>
-                                    <strong>Bridal Garden</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <img src="/images/Projects/LigSport/LigSportWebsite.png" alt="">
-                                    <div class="overlayer"></div>
-                                    <strong>LigSport</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <img src="/images/Projects/BSCA/BSCALogoCarousel.png" alt="">
-                                    <div class="overlayer"></div>
-                                    <strong>BSCA</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="">
-                                    <img src="/images/Projects/Penaltia/PenaltiaLogoCarousel.png" alt="">
-                                    <div class="overlayer"></div>
-                                    <strong>Penaltia</strong>
-                                </a>
+                            <div class="overlay">
+                                <a href="">Taxi Beka</a>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+
+                        <div class="item">
+                            <div class="imageContainer">
+                                <img src="/images/Projects/Bridal Garden/BridalGardenLogoCarousel.png" />
+                            </div>
+
+                            <div class="overlay">
+                                <a href="">Bridal Garden</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imageContainer">
+                                <img src="/images/Projects/LigSport/LigSportWebsite.png" />
+                            </div>
+                            <div class="overlay">
+                                <a href="">LigSport</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imageContainer">
+                                <img src="/images/Projects/BSCA/BSCALogoCarousel.png" />
+                            </div>
+                            <div class="overlay">
+                                <a href="">BSCA</a>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="imageContainer">
+                                <img src="/images/Projects/Penaltia/PenaltiaLogoCarousel.png" />
+                            </div>
+                            <div class="overlay">
+                                <a href="">Penaltia</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1"></div>
@@ -345,7 +356,8 @@
                         social media management or landing pages
                         gigs.</p>
                     <div id="link-container">
-                        <a href="mailto: blertana05@gmail.com" id="write">Write me an email&nbsp; <strong><i class="fa-solid fa-envelope"></i></strong></a>
+                        <a href="mailto: blertana05@gmail.com" id="write">Write me an email&nbsp; <strong><i
+                                    class="fa-solid fa-envelope"></i></strong></a>
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1 col-1"></div>
@@ -362,28 +374,19 @@
                 <div class="col-lg-1"></div>
             </div>
         </div>
-
     </div>
 
     <script>
-
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 50,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 600,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: false,
+            autoplay: true,
+            arrows: false
         });
-
-        document.body.onload = () => {
-            lscreen = document.getElementById("loading-screen");
-
-            // load any data and call the function "closeLoadingScreen(lscreen)"
-
-            setTimeout(() => { closeLoadingScreen(lscreen) }, 5000); // FOR DEMO
-        }
-
     </script>
 </body>
 
