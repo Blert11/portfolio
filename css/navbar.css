@@ -44,6 +44,33 @@
     opacity: 1;
 }
 
+#returnHome{
+    color: #999;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    transform: translate(-0.75em);
+    transition: transform 200ms;
+}
+
+#returnHome::after{
+    content: "⌂";
+    display: inline-block;
+    width: 0.75em;
+    color: white;
+    opacity: 0;
+    transition: opacity 200ms;
+    margin-left: 10px;
+}
+
+#returnHome:hover{
+    transform: none;
+}
+
+#returnHome:hover::after{
+    opacity: 1;
+}
+
 #logo{
     width: 3rem !important;
 }

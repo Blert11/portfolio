@@ -1,0 +1,94 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("/Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("/Fonts/GTWalsheimPro-Light.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProCondensedLight;
+    src: url("/Fonts/GTWalsheimPro-Thin.woff");
+}
+
+#projectDetailsDiv{
+    margin-top: 75px;
+}
+
+#projectDetail{
+    color: white;
+    letter-spacing: 2px;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 50px;
+}
+
+#websiteAndFacebookDiv{
+    margin-top: 25px;
+}
+
+.box{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.box img{
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.box1{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.box1 img{
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.box2{
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-position: bottom;
+    background-size: cover;
+    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 75%), url("/images/Projects/BSCA/BSCAVideo.PNG");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 a{
+    color: #999;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .25s;
+}
+
+.box2 a:hover{
+    color: white;
+}
+
+@media screen and (max-width: 800px){
+    #projectDetailsDiv{
+        margin-top: 50px;
+    }
+
+    #projectDetail{
+        font-size: 35px;
+    }
+
+    .box1{
+        margin-top: 50px;
+    }
+}
