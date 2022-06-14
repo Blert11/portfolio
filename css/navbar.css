@@ -2,7 +2,9 @@
     width: 100%;
     padding: 25px 0;
     height: 10vh;
-    position: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #navbar{
@@ -15,8 +17,35 @@
     right: 0;
 }
 
+#nextProject{
+    color: #999;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    transform: translate(-0.75em);
+    transition: transform 200ms;
+}
+
+#nextProject::after{
+    content: "→";
+    display: inline-block;
+    width: 0.75em;
+    color: white;
+    opacity: 0;
+    transition: opacity 200ms;
+    margin-left: 10px;
+}
+
+#nextProject:hover{
+    transform: none;
+}
+
+#nextProject:hover::after{
+    opacity: 1;
+}
+
 #logo{
-    width: 3rem;
+    width: 3rem !important;
 }
 
 @media screen and (max-width: 800px){

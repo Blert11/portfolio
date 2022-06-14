@@ -65,6 +65,7 @@
     #processesDiv{
         padding: 50px 0 0 0;
     }
+    
     .processes-div-2{
         top: 0;
     }
@@ -87,5 +88,9 @@
 
     #processTitle{
         font-size: 45px;
+    }
+
+    #processes{
+        margin: 20px 0;
     }
 }

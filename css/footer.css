@@ -18,6 +18,11 @@
     text-align: center;
 }
 
+#footerDivProjects{
+    text-align: center;
+    padding: 100px 0 75px ;
+}
+
 #whatsNext {
     color: #5f99ff;
     text-transform: uppercase;
