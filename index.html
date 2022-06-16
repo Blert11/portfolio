@@ -21,14 +21,17 @@
     <link rel="stylesheet" href="./css/projects.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
 
     <!-- Javascripts -->
     <script src="/js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
     <!-- Icon -->
     <link rel="icon" href="./images/Logos/LogoBlertRreth.png">
@@ -46,6 +49,15 @@
 </head>
 
 <body>
+
+    <div class="overlay">
+        <div class="overlayDoor"></div>
+        <div class="overlayContent">
+            <div class="loading-spinner">
+
+            </div>
+        </div>
+    </div>
 
     <div class="container" id="navbar">
 
@@ -97,14 +109,14 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-5 col-md-5 col-10">
-                <p id="skillset">My Skillset</p>
-                <h1 id="graphicTitle">Graphic Design, <br />
+                <p id="skillset" data-aos="fade-up">My Skillset</p>
+                <h1 id="graphicTitle" data-aos="fade-up">Graphic Design, <br />
                     Interface Design & <br />
                     User Experience</h1>
-                <div id="link-container">
+                <div id="link-container" data-aos="fade-up">
                     <a href="#processesDiv" id="processes">My Processes</a>
                 </div>
-                <p id="skillsetParagraphSM">
+                <p id="skillsetParagraphSM" data-aos="fade-up">
                     I specialize in building complex web applications, digital product
                     design
                     and developing visual design systems. I enjoy creating effortless user experience and designing
@@ -116,7 +128,7 @@
                 </p>
             </div>
             <div class="col-lg-5 col-md-5 col-10 text-center">
-                <p id="skillsetParagraphLG">
+                <p id="skillsetParagraphLG" data-aos="fade-up">
                     I specialize in building complex web applications, digital product
                     design
                     and developing visual design systems. I enjoy creating effortless user experience and designing
@@ -137,7 +149,8 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
-                <h1 id="processTitle">Process&nbsp; <span style="color: #5f99ff; font-size: 40px;">+</span></h1>
+                <h1 id="processTitle" data-aos="fade-up">Process&nbsp; <span
+                        style="color: #5f99ff; font-size: 40px;">+</span></h1>
             </div>
             <div class="col-lg-1 col-md-1 col-1"></div>
         </div>
@@ -147,7 +160,7 @@
             <div class="col-lg-10 col-md-10 col-10" style="display: inline-block;">
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-6 processes-div text-left">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div text-left" data-aos="fade-up">
                         <span>01</span>
                         <h1>Pre-Process</h1>
                         <ul>
@@ -158,7 +171,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-6 processes-div">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div" data-aos="fade-up">
                         <span>02</span>
                         <h1>Low Fidelity</h1>
                         <ul>
@@ -169,7 +182,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-6 processes-div">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div" data-aos="fade-up">
                         <span>03</span>
                         <h1>Work-Design</h1>
                         <ul>
@@ -180,7 +193,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2" data-aos="fade-up">
                         <span>04</span>
                         <h1>Assets & Delivery</h1>
                         <ul>
@@ -191,7 +204,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2" data-aos="fade-up">
                         <span>05</span>
                         <h1>Final & Test</h1>
                         <ul>
@@ -202,7 +215,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2">
+                    <div class="col-lg-4 col-md-4 col-6 processes-div processes-div-2" data-aos="fade-up">
                         <span>06</span>
                         <h1>After Design</h1>
                         <ul>
@@ -224,7 +237,8 @@
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
                 <div class="col-lg-10 col-md-10 col-10">
-                    <h1 id="processTitle">Recent Projects&nbsp; <span style="color: #5f99ff; font-size: 40px;">+</span>
+                    <h1 id="processTitle" data-aos="fade-up">Recent Projects&nbsp; <span
+                            style="color: #5f99ff; font-size: 40px;">+</span>
                     </h1>
                 </div>
             </div>
@@ -309,13 +323,14 @@
             <div class="col-lg-1 col-md-1 col-1"></div>
 
             <div class="col-lg-5 col-md-5 col-10">
-                <p id="about">About Me</p>
-                <h1 id="designingTitle">Designing with passion for Problem Solving</h1>
-                <div id="link-container-instagram">
+                <p id="about" data-aos="fade-up">About Me</p>
+                <h1 id="designingTitle" data-aos="fade-up">Designing with passion for Problem Solving</h1>
+                <div id="link-container-instagram" data-aos="fade-up">
                     <a target="_blank" href="https://www.instagram.com/blertanadolli/" id="follow">Follow me on
                         instagram&nbsp; <strong><i class="fa-brands fa-instagram"></i></strong></a>
                 </div>
-                <p id="videoParagraphSM">I've always been passionate about pixels and design projects and haven't
+                <p id="videoParagraphSM" data-aos="fade-up">I've always been passionate about pixels and design projects
+                    and haven't
                     stopped working and
                     learning about new technologies . Other than sitting in from of my display I enjoy myself in
                     casual sports, such as football or video games.
@@ -331,7 +346,8 @@
             </div>
 
             <div class="col-lg-5 col-md-5 col-10 text-center">
-                <p id="videoParagraphLG">I've always been passionate about pixels and design projects and haven't
+                <p id="videoParagraphLG" data-aos="fade-up">I've always been passionate about pixels and design projects
+                    and haven't
                     stopped working and
                     learning about new technologies . Other than sitting in from of my display I enjoy myself in
                     casual sports, such as football or video games.
@@ -355,15 +371,16 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
-                <p id="whatsNext">What's next?</p>
-                <h1 id="letsWork">Let's work together<span style="color: #5f99ff;">.</span></h1>
-                <p id="ifYou">If you'd like to talk about a project you want help with or need an advice about
+                <p id="whatsNext" data-aos="fade-up">What's next?</p>
+                <h1 id="letsWork" data-aos="fade-up">Let's work together<span style="color: #5f99ff;">.</span></h1>
+                <p id="ifYou" data-aos="fade-up">If you'd like to talk about a project you want help with or need an
+                    advice about
                     product design,
                     just drop me a message at <strong>blertana05@gmail.com</strong>. <br>
                     I'm currently Available for any design systems projects, dashboard designs, graphic designs,
                     social media management or landing pages
                     gigs.</p>
-                <div id="link-container-email">
+                <div id="link-container-email" data-aos="fade-up">
                     <a href="mailto: blertana05@gmail.com" id="write">Write me an email&nbsp; <strong><i
                                 class="fa-solid fa-envelope"></i></strong></a>
                 </div>
@@ -394,6 +411,29 @@
             autoplay: true,
             arrows: false
         });
+        $(document).ready(function () {
+            // Users can skip the loading process if they want.
+            $('.skip').click(function () {
+                $('.overlay, body').addClass('loaded');
+            })
+
+            // Will wait for everything on the page to load.
+            $(window).bind('load', function () {
+                $('.overlay, body').addClass('loaded');
+                setTimeout(function () {
+                    $('.overlay').css({ 'display': 'none' })
+                }, 2000)
+            });
+
+            // Will remove overlay after 1min for users cannnot load properly.
+            setTimeout(function () {
+                $('.overlay, body').addClass('loaded');
+            }, 60000);
+        })
+
+        AOS.init({
+            duration: 1200,
+        })
     </script>
 </body>
 

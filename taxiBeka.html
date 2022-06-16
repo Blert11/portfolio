@@ -11,8 +11,17 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/projects/taxiBeka/projectHero.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
     <link rel="stylesheet" href="./css/projects/taxiBeka/projectDetails.css">
+
+    <!-- Javascripts -->
+    <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 
     <!-- Icon -->
     <link rel="icon" href="./images/Logos/LogoBlertRreth.png">
@@ -29,6 +38,16 @@
 </head>
 
 <body>
+
+    <div class="overlay">
+        <div class="overlayDoor"></div>
+        <div class="overlayContent">
+            <div class="loading-spinner">
+
+            </div>
+        </div>
+    </div>
+
     <div class="container" id="navbar">
 
         <div class="row">
@@ -50,7 +69,7 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10" id="projectNameDiv">
-                <h1 id="projectName">Taxi Beka</h1>
+                <h1 id="projectName" data-aos="fade-up">Taxi Beka</h1>
             </div>
             <div class="col-lg-1"></div>
         </div>
@@ -62,8 +81,8 @@
             <div class="col-lg-10 col-md-10 col-10" id="overviewDiv">
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-12">
-                        <h1 class="overview">Overview</h1>
-                        <p id="overviewParagraph">
+                        <h1 class="overview" data-aos="fade-up">Overview</h1>
+                        <p id="overviewParagraph" data-aos="fade-up">
                             With over 14 years of experience, Radio Taxi Beka is a leader
                             in the taxi industry with a capacity of over 20 luxury cars. With a large extension over the
                             entire
@@ -78,26 +97,26 @@
 
                         <br>
 
-                        <h1 class="overview">Client</h1>
+                        <h1 class="overview" data-aos="fade-up">Client</h1>
 
-                        <div class="clientDiv">
+                        <div class="clientDiv" data-aos="fade-up">
                             <img class="clientImage" src="/images/Projects/TaxiBeka/LogoRTB.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-0"></div>
                     <div class="col-lg-6 col-md-7 col-12">
-                        <h1 class="overviewRole">Role</h1>
-                        <p class="roleList">· Website Designer</p>
-                        <p class="roleList">· Social Media Manager</p>
+                        <h1 class="overviewRole" data-aos="fade-up">Role</h1>
+                        <p class="roleList" data-aos="fade-up">· Website Designer</p>
+                        <p class="roleList" data-aos="fade-up">· Social Media Manager</p>
 
                         <br>
 
-                        <h1 class="overview">Team</h1>
-                        <p class="roleList">- Blert Anadolli</p>
+                        <h1 class="overview" data-aos="fade-up">Team</h1>
+                        <p class="roleList" data-aos="fade-up">- Blert Anadolli</p>
 
                         <br>
 
-                        <p class="date">December 2020 - Active</p>
+                        <p class="date" data-aos="fade-up">December 2020 - Active</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +128,7 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
-                <h1 id="projectDetail">Project Details<span style="color: #5f99ff">.</span></h1>
+                <h1 id="projectDetail" data-aos="fade-up">Project Details<span style="color: #5f99ff">.</span></h1>
             </div>
             <div class="col-lg-1 col-md-1 col-1"></div>
         </div>
@@ -118,14 +137,14 @@
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
                 <div class="row" id="websiteAndFacebookDiv">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up">
                         <a href="https://radiotaxibeka.com/en" target="_blank">
                             <div class="websiteDivScroll">
 
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up">
                         <a href="https://www.facebook.com/RadioTaxiBeka" target="_blank">
                             <div class="facebookDiv">
 
@@ -142,15 +161,15 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
-                <p id="whatsNext">What's next?</p>
-                <h1 id="letsWork">Let's work together<span style="color: #5f99ff;">.</span></h1>
-                <p id="ifYou">If you'd like to talk about a project you want help with or need an advice about
+                <p id="whatsNext" data-aos="fade-up">What's next?</p>
+                <h1 id="letsWork" data-aos="fade-up">Let's work together<span style="color: #5f99ff;">.</span></h1>
+                <p id="ifYou" data-aos="fade-up">If you'd like to talk about a project you want help with or need an advice about
                     product design,
                     just drop me a message at <strong>blertana05@gmail.com</strong>. <br>
                     I'm currently Available for any design systems projects, dashboard designs, graphic designs,
                     social media management or landing pages
                     gigs.</p>
-                <div id="link-container-email">
+                <div id="link-container-email" data-aos="fade-up">
                     <a href="mailto: blertana05@gmail.com" id="write">Write me an email&nbsp; <strong><i
                                 class="fa-solid fa-envelope"></i></strong></a>
                 </div>
@@ -169,6 +188,32 @@
             <div class="col-lg-1"></div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            // Users can skip the loading process if they want.
+            $('.skip').click(function () {
+                $('.overlay, body').addClass('loaded');
+            })
+
+            // Will wait for everything on the page to load.
+            $(window).bind('load', function () {
+                $('.overlay, body').addClass('loaded');
+                setTimeout(function () {
+                    $('.overlay').css({ 'display': 'none' })
+                }, 2000)
+            });
+
+            // Will remove overlay after 1min for users cannnot load properly.
+            setTimeout(function () {
+                $('.overlay, body').addClass('loaded');
+            }, 60000);
+        })
+
+        AOS.init({
+            duration: 1200,
+        })
+    </script>
 </body>
 
 </html>
