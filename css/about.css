@@ -27,10 +27,10 @@
     top: 0;
     left: 0;
     z-index: -5;
-    background: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.99) 75%);
+    background: radial-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.99) 75%);
 }
 
-video.fullscreen {
+.fullscreen {
     position: absolute;
     z-index: 0;
     object-fit: cover;
@@ -43,7 +43,7 @@ video.fullscreen {
     align-items: center;
 }
 
-video.fullscreen::-webkit-media-controls {
+.fullscreen::-webkit-media-controls {
     display: none !important;
 }
 
