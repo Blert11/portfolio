@@ -60,9 +60,9 @@
     margin-top: 50px;
     overflow: hidden;
     border-radius: 8px;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
-    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 75%), url("/images/Projects/BSCA/BSCAVideo.PNG");
+    background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) 75%), url("/images/Projects/BSCA/VideoThumbnail.PNG");
     display: flex;
     align-items: center;
     justify-content: center;

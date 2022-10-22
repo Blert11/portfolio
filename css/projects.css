@@ -12,245 +12,99 @@
     padding: 100px 0 75px;
 }
 
-.carousel {
+.slider {
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    cursor: grab;
+    border-radius: 10px;
 }
 
-.carousel .item {
-    position: relative;
+.slides {
+    background: transparent;
+    border-radius: 10px;
 }
 
-.carousel .item .imageContainer {
-    display: block;
-    width: 100%;
-    position: relative;
+.slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
     height: 500px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 20px;
-}
-
-.carousel .item .imageContainer:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: red;
-    width: 100%;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0.75)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 90%, rgba(0, 0, 0, 0.95) 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#bf000000', GradientType=0);
-    border-radius: 20px !important;
-    /* IE6-9 */
-}
-
-.slick-dots li button:before {
-    color: white !important;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #5f99ff !important;
-}
-
-.carousel .item img {
-    display: block;
-    width: 100%;
-    height: 500px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.carousel .item .overlay {
-    z-index: 999;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    color: #fff;
-    padding: 30px 0px 70px 0px;
-    text-align: center;
-}
-
-.carousel .item .overlay a {
-    text-align: center;
+    outline: 0 !important;
+    color: #ccc;
     font-size: 40px;
-    font-weight: 300;
-    width: 70%;
-    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.slide img{
+    object-fit: cover;
+    border-radius: 7px;
+    width: 100%;
+    height: 500px;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.captions {
+    flex: 1;
+    width: 100px;
+    padding: 5px 10px;
+    margin-top: 2px;
+}
+
+.caption {
+    outline: 0 !important;
+}
+
+.caption h1{
+    font-size: 25px;
     color: white;
-    text-decoration: none;
-    margin: auto;
-    padding-left: 20px;
     font-family: GTWalsheimProCondensedBold;
-    transition: .25s all ease;
-    letter-spacing: 2px;
 }
 
-.carousel .item .overlay a:hover {
+.caption p{
     color: #5f99ff;
+    font-family: GTWalsheimProLight;
+    margin-top: -5px;
 }
 
-.carousel .slick-dots {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 999;
+.pagination {
+    display: flex;
+    margin-top: 2px;
 }
 
-.slick-dots li button:before {
-    color: #fff;
+.pagination__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    width: 40px;
+    height: 40px;
+    margin-left: 2px;
+    transition: .25s;
 }
 
-.slick-dots li.slick-active button:before {
-    color: #5f99ff;
+.pagination__button:hover {
+    color: lightgray;
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1100px) {
-    #projectsDiv {
-        padding: 0;
-    }
-
-    .carousel {
-        height: 500px;
-    }
-
-    .carousel .item .imageContainer {
-        height: 400px;
-    }
-
-    .carousel .item .overlay {
-        padding-bottom: 55px;
-    }
-
-    .carousel .item .overlay a {
-        width: 80%;
-        font-size: 25px;
-        line-height: 40px;
-        padding-bottom: 10px;
-        text-align: center;
-    }
-
-    .carousel .item img {
-        height: 400px;
-    }
+.pagination__button.slick-disabled {
+    cursor: not-allowed;
+    color: rgb(88, 88, 88);
 }
 
-@media only screen and (min-width: 651px) and (max-width: 900px) {
-    #projectsDiv {
-        padding: 0;
-        margin-top: -50px !important;
+
+@media screen and (max-width: 800px){
+    .slide{
+        height: 300px;
+        border-radius: 15px;
     }
 
-    #processTitle{
-        margin-top: -100px !important;
-    }
-
-    .carousel .item .overlay {
-        padding-bottom: 50px;
-    }
-
-    .carousel .item .overlay a {
-        width: 80%;
-        font-size: 20px;
-        line-height: 30px;
-        padding-bottom: 10px;
-        text-align: center;
-    }
-
-    .carousel .item .imageContainer {
-        height: 400px;
-    }
-
-    .carousel .item img {
-        height: 400px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .carousel .item .overlay {
-        position: relative;
-        background: inherit;
-        color: white;
-        padding: 25px 20px 40px 20px;
-    }
-
-    .carousel .item .overlay a {
-        width: 100%;
-        text-align: left;
-        color: white;
-        font-size: 25px;
-        font-weight: 400;
-        text-align: center;
-    }
-
-    .carousel .slick-dots {
-        bottom: -15px;
-        left: 8px;
-    }
-
-    .slick-dots li button:before {
-        color: white !important;
-    }
-
-    .slick-dots li.slick-active button:before {
-        color: white !important;
-    }
-
-    .carousel .item .imageContainer {
-        height: 400px;
-    }
-
-    .carousel .item img {
-        height: 400px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .carousel .item .overlay {
-        padding: 15px 15px 40px 15px;
-    }
-
-    .carousel .item .overlay h3 {
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-    }
-
-    .carousel .item .imageContainer {
-        height: 400px;
-    }
-
-    .carousel .item img {
-        height: 400px;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .carousel .item .overlay a {
-        font-size: 20px;
-        line-height: 25px;
-        text-align: center;
-    }
-
-    .carousel .item .imageContainer {
-        height: 400px;
-    }
-
-    .carousel .item img {
-        height: 400px;
+    .slide img{
+        height: 300px;
+        border-radius: 4px;
     }
 }

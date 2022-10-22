@@ -6,3 +6,4 @@
 [0610/170520.131:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
 [0610/170525.140:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
 [0610/170530.161:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1016/233132.282:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.

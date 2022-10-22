@@ -45,6 +45,10 @@ html {
     background: #999;
 }
 
+::selection{
+    display: none;
+}
+
 @media screen and (max-width: 800px){
     body{
         overflow-x: hidden !important;
