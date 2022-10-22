@@ -12,6 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Blert Anadolli</title>
 
+    <meta property="og:image" content="/images/Logos/WebSharePhoto.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
+
     <!-- Styles -->
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/navbar.css">
@@ -22,9 +27,9 @@
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/loader.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Javascripts -->
     <script src="/js/index.js"></script>
@@ -32,6 +37,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 
     <!-- Icon -->
     <link rel="icon" href="./images/Logos/LogoBlertRreth.png">
@@ -50,12 +59,12 @@
 
 <body>
 
-    <div class="overlay">
+    <!-- <div class="overlay">
         <div class="overlayDoor"></div>
         <div class="overlayContent">
             <img id="logoLoader" src="./images/Logos/PNGLogoBlertBardh.png" alt="">
         </div>
-    </div>
+    </div> -->
 
     <div class="container" id="navbar">
 
@@ -89,7 +98,7 @@
                             <span>designer</span>
                             <span>from</span>
                             <span>Peja,</span>
-                            <span>Kosovo<span style="color: #5f99ff">.</span></span>
+                            <span>Kosovo<span style="color: #5f99ff; position: relative; top: 7px;">.</span></span>
                         </h1>
                     </div>
                     <a id="ScrollDown"><span><i class="fas fa-chevron-down"></i></span> &nbsp;
@@ -246,64 +255,80 @@
         <div class="row">
             <div class="col-lg-1 col-md-1 col-1"></div>
             <div class="col-lg-10 col-md-10 col-10">
-                <div class="carousel">
-
-                    <div class="item">
-                        <a href="/taxiBeka.html">
-                            <div class="imageContainer">
-                                <img src="/images/Projects/TaxiBeka/TaxiBekaWebsite.png" />
-                            </div>
-                            <div class="overlay">
-                                <a href="/taxiBeka.html">Taxi Beka</a>
-                            </div>
-                        </a>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <a href="/pejanefokus.html" style="width: 100%;">
+                                <img src="/images/Projects/Pejanefokus/PejanefokusWebsite.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="/bridalGarden.html" style="width: 100%;">
+                                <img src="/images/Projects/bridalGarden/BridalGardenLogoCarousel.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="/ligSport.html" style="width: 100%;">
+                                <img src="/images/Projects/LigSport/LigSportWebsite.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="/bsca.html" style="width: 100%;">
+                                <img src="/images/Projects/BSCA/LogoCarousel.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="taxiBeka.html" style="width: 100%;">
+                                <img src="/images/Projects/TaxiBeka/TaxiBekaWebsite.png" alt="">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="/penaltia.html" style="width: 100%;">
+                                <img src="/images/Projects/Penaltia/Brand&Website.gif" alt="">
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="item">
-                        <a href="/bridalGarden.html">
-                            <div class="imageContainer">
-                                <img src="/images/Projects/bridalGarden/BridalGardenLogoCarousel.png" />
+                    <div class="controls">
+                        <div class="captions">
+                            <div class="caption">
+                                <a href="/pejanefokus.html" style="text-decoration: none;">
+                                    <h1>Peja në Fokus</h1>
+                                    <p>Website</p>
+                                </a>
                             </div>
-
-                            <div class="overlay">
-                                <a href="/bridalGarden.html">Bridal Garden</a>
+                            <div class="caption">
+                                <a href="/bridalGarden.html" style="text-decoration: none;">
+                                    <h1>Bridal Garden</h1>
+                                    <p>Brand</p>
+                                </a>
                             </div>
-                        </a>
+                            <div class="caption">
+                                <a href="/ligSport.html" style="text-decoration: none;">
+                                    <h1>LIG Sport</h1>
+                                    <p>Website</p>
+                                </a>
+                            </div>
+                            <div class="caption">
+                                <a href="/bsca.html" style="text-decoration: none;">
+                                    <h1>BSCA</h1>
+                                    <p>Brand and Video</p>
+                                </a>
+                            </div>
+                            <div class="caption">
+                                <a href="/taxiBeka.html" style="text-decoration: none;">
+                                    <h1>Taxi Beka</h1>
+                                    <p>Website & Social Media</p>
+                                </a>
+                            </div>
+                            <div class="caption">
+                                <a href="/penaltia.html" style="text-decoration: none;">
+                                    <h1>Penaltia</h1>
+                                    <p>Website & Brand</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pagination"></div>
                     </div>
-
-                    <div class="item">
-                        <a href="/ligSport.html">
-                            <div class="imageContainer">
-                                <img src="/images/Projects/LigSport/LigSportWebsite.png" />
-                            </div>
-                            <div class="overlay">
-                                <a href="/ligSport.html">LigSport</a>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a href="/bsca.html">
-                            <div class="imageContainer">
-                                <img src="/images/Projects/BSCA/BSCALogoCarousel.png" />
-                            </div>
-                            <div class="overlay">
-                                <a href="/bsca.html">BSCA</a>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a href="/penaltia.html">
-                            <div class="imageContainer">
-                                <img src="/images/Projects/Penaltia/PenaltiaLogoCarousel.png" />
-                            </div>
-                            <div class="overlay">
-                                <a href="/penaltia.html">Penaltia</a>
-                            </div>
-                        </a>
-                    </div>
-
                 </div>
             </div>
             <div class="col-lg-1 col-md-1 col-1"></div>
@@ -327,7 +352,8 @@
                     <a target="_blank" href="https://www.instagram.com/blertanadolli/" id="follow">Follow me on
                         instagram&nbsp; <strong><i class="fa-brands fa-instagram"></i></strong></a>
                 </div>
-                <p id="videoParagraphSM" data-aos="fade-up">I've always been passionate about pixels and design projects
+                <p id="videoParagraphSM" data-aos="fade-up">I've always been passionate about pixels and design
+                    projects
                     and haven't
                     stopped working and
                     learning about new technologies . Other than sitting in from of my display I enjoy myself in
@@ -344,7 +370,8 @@
             </div>
 
             <div class="col-lg-5 col-md-5 col-10 text-center">
-                <p id="videoParagraphLG" data-aos="fade-up">I've always been passionate about pixels and design projects
+                <p id="videoParagraphLG" data-aos="fade-up">I've always been passionate about pixels and design
+                    projects
                     and haven't
                     stopped working and
                     learning about new technologies . Other than sitting in from of my display I enjoy myself in
@@ -398,17 +425,30 @@
         </div>
     </div>
 
+
     <script>
-        $('.carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 600,
-            slidesToShow: 1,
-            centerMode: false,
-            variableWidth: false,
-            autoplay: true,
+
+        $(".slides").slick({
+            asNavFor: '.captions',
+            infinite: false,
+            speed: 200,
             arrows: false
+        })
+
+        $(".captions").slick({
+            asNavFor: '.slides',
+            infinite: false,
+            speed: 200,
+            fade: true,
+            appendArrows: $('.pagination'),
+            prevArrow: '<div class="pagination__button"><i class="material-icons">keyboard_arrow_left</i></div>',
+            nextArrow: '<div class="pagination__button"><i class="material-icons">keyboard_arrow_right</i></div>'
+        })
+
+        $(document).ready(function () {
+            $(this).scrollTop(0);
         });
+
         $(document).ready(function () {
             // Users can skip the loading process if they want.
             $('.skip').click(function () {
