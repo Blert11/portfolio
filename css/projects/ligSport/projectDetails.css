@@ -60,6 +60,10 @@
     background-position: right;
 }
 
+.clickToView{
+    display: none;
+}
+
 @media screen and (max-width: 800px){
     #projectDetailsDiv{
         margin-top: 50px;
@@ -71,5 +75,12 @@
 
     .facebookDiv{
         margin-top: 50px;
+    }
+    
+    .clickToView{
+        display: block;
+        text-decoration: none !important;
+        color: lightgrey;
+        margin-top: 15px;
     }
 }

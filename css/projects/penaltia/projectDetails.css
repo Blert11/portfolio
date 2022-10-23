@@ -13,22 +13,22 @@
     src: url("/Fonts/GTWalsheimPro-Thin.woff");
 }
 
-#projectDetailsDiv{
+#projectDetailsDiv {
     margin-top: 75px;
 }
 
-#projectDetail{
+#projectDetail {
     color: white;
     letter-spacing: 2px;
     font-family: GTWalsheimProCondensedBold;
     font-size: 50px;
 }
 
-#websiteAndFacebookDiv{
+#websiteAndFacebookDiv {
     margin-top: 25px;
 }
 
-.websiteDivScroll{
+.websiteDivScroll {
     cursor: pointer;
     margin: auto;
     width: 100%;
@@ -40,11 +40,11 @@
     transition: background 5s;
 }
 
-.websiteDivScroll:hover{
+.websiteDivScroll:hover {
     background-position: bottom;
 }
 
-.facebookDiv{
+.facebookDiv {
     cursor: pointer;
     margin: auto;
     width: 100%;
@@ -56,34 +56,45 @@
     transition: background 3s;
 }
 
-.facebookDiv:hover{
+.facebookDiv:hover {
     background-position: right;
 }
 
-.box2{
+.box2 {
     width: 100%;
     height: 450px;
     margin-top: 50px;
     overflow: hidden;
 }
 
-.box2 img{
+.box2 img {
     width: 100%;
     height: 450px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-@media screen and (max-width: 800px){
-    #projectDetailsDiv{
+.clickToView{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    #projectDetailsDiv {
         margin-top: 50px;
     }
 
-    #projectDetail{
+    #projectDetail {
         font-size: 35px;
     }
 
-    .facebookDiv{
+    .facebookDiv {
         margin-top: 50px;
+    }
+
+    .clickToView {
+        display: block;
+        text-decoration: none !important;
+        color: lightgrey;
+        margin-top: 15px;
     }
 }
