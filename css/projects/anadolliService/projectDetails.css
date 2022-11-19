@@ -1,0 +1,83 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("/Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("/Fonts/GTWalsheimPro-Light.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProCondensedLight;
+    src: url("/Fonts/GTWalsheimPro-Thin.woff");
+}
+
+#projectDetailsDiv{
+    margin-top: 75px;
+}
+
+#projectDetail{
+    color: white;
+    letter-spacing: 2px;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 50px;
+}
+
+#websiteAndFacebookDiv{
+    margin-top: 25px;
+}
+
+.box{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.box img{
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.box1{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.box1 img{
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.box2{
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.box2 img{
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 800px){
+    #projectDetailsDiv{
+        margin-top: 50px;
+    }
+
+    #projectDetail{
+        font-size: 35px;
+    }
+
+    .box1{
+        margin-top: 50px;
+    }
+}
