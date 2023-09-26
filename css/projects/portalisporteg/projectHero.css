@@ -1,0 +1,104 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("/Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("/Fonts/GTWalsheimPro-Light.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProCondensedLight;
+    src: url("/Fonts/GTWalsheimPro-Thin.woff");
+}
+
+#projectNameDiv{
+    margin-top: 20vh;
+    margin-bottom: 75px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.99) 75%), url("/images/Projects/PortaliSporteg/WebsitCover.png");  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#projectName{
+    color: white;
+    font-weight: bolder;
+    width: 100%;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: GTWalsheimProCondensedBold;
+}
+
+#overviewDiv{
+    display: inline-block;
+}
+
+.overview{
+    color: white;
+    font-family: GTWalsheimProCondensedLight;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.overviewRole{
+    color: white;
+    font-family: GTWalsheimProCondensedLight;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+#overviewParagraph{
+    color: #999999;
+    font-size: 1.1em;
+    letter-spacing: 0.2px;
+    font-family: GTWalsheimProLight;
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 25px;
+}
+
+.roleList{
+    color: #999;
+    margin-left: 10px;
+}
+
+.date{
+    color: white;
+    font-family: GTWalsheimProLight;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.clientDiv{
+    background-color: transparent;
+    width: 40%;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+}
+
+.clientImage{
+    width: 100px;
+}
+
+@media screen and (max-width: 800px){
+    .overviewRole{
+        margin-top: 50px;
+    }
+
+    #projectName{
+        font-size: 40px;
+    }
+}

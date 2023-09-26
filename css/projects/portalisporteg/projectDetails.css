@@ -1,0 +1,100 @@
+@font-face {
+    font-family: GTWalsheimProCondensedBold;
+    src: url("/Fonts/GTWalsheimPro-Bold.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProLight;
+    src: url("/Fonts/GTWalsheimPro-Light.woff");
+}
+
+@font-face {
+    font-family: GTWalsheimProCondensedLight;
+    src: url("/Fonts/GTWalsheimPro-Thin.woff");
+}
+
+#projectDetailsDiv {
+    margin-top: 75px;
+}
+
+#projectDetail {
+    color: white;
+    letter-spacing: 2px;
+    font-family: GTWalsheimProCondensedBold;
+    font-size: 50px;
+}
+
+#websiteAndFacebookDiv {
+    margin-top: 25px;
+}
+
+.websiteDivScroll {
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+    height: 450px;
+    background-image: url("/images/Projects/PortaliSporteg/Website.png");
+    background-size: cover;
+    background-position: top;
+    border-radius: 8px;
+    transition: background 5s;
+}
+
+.websiteDivScroll:hover {
+    background-position: bottom;
+}
+
+.facebookDiv {
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+    height: 450px;
+    background-image: url("/images/Projects/PortaliSporteg/FacebookDIV.png");
+    background-size: cover;
+    background-position: left;
+    border-radius: 8px;
+    transition: background 3s;
+}
+
+.facebookDiv:hover {
+    background-position: right;
+}
+
+.box2 {
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.box2 img {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.clickToView{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    #projectDetailsDiv {
+        margin-top: 50px;
+    }
+
+    #projectDetail {
+        font-size: 35px;
+    }
+
+    .facebookDiv {
+        margin-top: 50px;
+    }
+
+    .clickToView {
+        display: block;
+        text-decoration: none !important;
+        color: lightgrey;
+        margin-top: 15px;
+    }
+}
