@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/calculator.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap-grid.min.css">
+</head>
+
+<body>
+
+    <div class="container navbar">
+
+        <header>
+            <a href="/">
+                <img class="logo" src="./images/Logos/PNGLogoBlertBardh.png" alt="Your Logo">
+                <a href="/" class="home-button">Home</a>
+            </a>
+        </header>
+
+        <div class="form-container">
+            <h1 class="price-title">Price Calculator</h1>
+            <form id="calculator-form">
+
+                <div class="company-div">
+                    <label for="company-name" class="label-bold">Company Name:</label>
+                    <input type="text" id="company-name" name="company-name" required><br>
+                </div>
+
+                <div class="category-div">
+                    <label for="category" class="label-bold">Choose a Website Category:</label>
+                    <select id="category" name="category">
+                        <option value="Business Informational">Business Informational</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Blog / News">Blog / News</option>
+                        <option value="E-Commerce">E-Commerce</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Hotel">Hotel</option>
+                    </select>
+                </div>
+
+
+                <div class="functions-div">
+                    <label class="label-bold">Choose Extra Website Functions:</label><br>
+
+                    <!-- Checkboxes for functions -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="applyForWork" name="function" value="Apply for Work">
+                        <label for="applyForWork">Apply for Work</label><br>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="bookMeeting" name="function" value="Book a Meeting">
+                        <label for="bookMeeting">Book a Meeting</label><br>
+                    </div>
+
+                    <!-- Checkbox for "Other" function with an input field -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="otherFunction" name="function" value="Other">
+                        <label for="otherFunction">Other</label>
+                        <input type="text" id="otherFunctionText" class="cb-field" name="otherFunction"
+                            placeholder="Specify Other Function" disabled><br>
+                    </div>
+                </div>
+
+
+                <div class="inspiration-div">
+                    <label for="inspirationWebsite" class="label-bold">Do you have an existing website for
+                        inspiration?</label><br>
+
+                    <div class="radio-container">
+                        <input type="radio" id="inspirationNo" name="inspiration" value="No">
+                        <label for="inspirationNo">No</label><br>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" id="inspirationYes" name="inspiration" value="Yes">
+                        <label for="inspirationYes">Yes</label><br>
+                    </div>
+
+                    <div id="websiteUrlContainer" style="display: none;">
+                        <label for="websiteUrl">Website URL for Inspiration:</label>
+                        <input type="url" id="websiteUrl" name="websiteUrl" placeholder="Enter URL">
+                    </div>
+                </div>
+
+                <div class="language-div">
+                    <label for="languages" class="label-bold">Select Website Languages:</label><br>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="albanian" name="languages" value="Albanian">
+                        <label for="albanian">Albanian</label><br>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="english" name="languages" value="English">
+                        <label for="english">English</label><br>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="otherLanguage" name="languages" value="Other">
+                        <label for="otherLanguage">Other</label>
+                        <input type="text" id="otherLanguageText" class="cb-field" name="otherLanguage"
+                            placeholder="Specify Other Language" disabled><br>
+                    </div>
+                </div>
+
+                <div class="deadline-div">
+                    <label for="deadline" class="label-bold">Do you need the website to be completed within two
+                        weeks?</label><br>
+
+                    <div class="radio-container">
+                        <input type="radio" id="deadlineYes" name="deadline" value="Yes">
+                        <label for="deadlineYes">Yes</label><br>
+                    </div>
+
+                    <div class="radio-container">
+                        <input type="radio" id="deadlineNo" name="deadline" value="No">
+                        <label for="deadlineNo">Not necessary, but welcomed!</label><br>
+                    </div>
+                </div>
+
+                <button type="button" id="calculate-button">Calculate Price</button>
+
+                <div id="total-price"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual service and template IDs from EmailJS.
+            const EMAILJS_SERVICE_ID = 'service_iw40est';
+            const EMAILJS_TEMPLATE_ID = 'template_oqjzmyk';
+
+            // Load the EmailJS library.
+            emailjs.init("hc8e0cez6itVjRAs3");
+
+            const calculateButton = document.getElementById("calculate-button");
+            const totalPriceDiv = document.getElementById("total-price");
+            const otherFunctionCheckbox = document.getElementById("otherFunction");
+            // Prices for each function
+            const functionPrices = {
+                "Business Informational": 400,
+                "Blog / News": 450,
+                "Restaurant": 450,
+                "Hotel": 450,
+                "Real Estate": 550,
+                "E-Commerce": 650,
+            };
+
+            const extraFunctionPrices = {
+                "Apply for Work": 50,
+                "Book a Meeting": 50,
+                "Other": 50,
+            };
+
+            const languagePrices = {
+                "Albanian": 0,
+                "English": 10,
+                "Other": 15,
+            };
+
+            const deadlinePrices = {
+                "Yes": 25,
+                "No": 0,
+            };
+
+            const applyForWorkCheckbox = document.getElementById("applyForWork"); // Define the applyForWorkCheckbox here
+            const bookMeetingCheckbox = document.getElementById("bookMeeting");
+
+
+            let selectedFunctions = [];
+
+
+            calculateButton.addEventListener("click", function () {
+                selectedFunctions = [];
+                const companyName = document.getElementById("company-name").value;
+                const selectedCategory = document.getElementById("category").value
+
+                const functionCheckboxes = document.querySelectorAll("input[name=function]");
+                functionCheckboxes.forEach((checkbox) => {
+                    if (checkbox.checked) {
+                        // Check if the checkbox is the "Other" function
+                        if (checkbox.value === "Other") {
+                            const otherFunctionText = document.getElementById("otherFunctionText").value;
+                            if (otherFunctionText) {
+                                selectedFunctions.push("Other: " + otherFunctionText);
+                            }
+                        } else {
+                            selectedFunctions.push(checkbox.value);
+                        }
+                    }
+                });
+
+                selectedFunctions = [...new Set(selectedFunctions)];
+
+                const selectedFunctionCheckboxes = [
+                    applyForWorkCheckbox,
+                    bookMeetingCheckbox,
+                    otherFunctionCheckbox
+                ];
+
+                selectedFunctionCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked && !selectedFunctions.includes(checkbox.value)) {
+                        selectedFunctions.push(checkbox.value);
+                    }
+                });
+
+                const selectedFunction = selectedFunctions.join(", ");
+
+                // Check if the "Other" checkbox is checked and add the text if available
+                if (otherFunctionCheckbox.checked) {
+                    const otherFunctionText = document.getElementById("otherFunctionText").value;
+                    if (otherFunctionText) {
+                        selectedFunctions.push("Other: " + otherFunctionText);
+                    }
+                }
+
+
+                const otherFunctionDescription = otherFunctionCheckbox.checked ? otherFunctionText.value : "";
+
+                const selectedFunctionText = otherFunctionDescription ? `${selectedFunction}: ${otherFunctionDescription}` : selectedFunction;
+
+
+                const inspirationNo = document.getElementById("inspirationNo");
+                const websiteUrlInput = document.getElementById("websiteUrl");
+
+                let selectedInspiration = "None";
+                const websiteUrl = document.getElementById("websiteUrl");
+                const inspirationYes = document.getElementById("inspirationYes");
+
+                if (inspirationYes.checked) {
+                    selectedInspiration = "Yes";
+                    // If "Yes" is selected, check if the website URL input has a value
+                    if (websiteUrl.value) {
+                        selectedInspiration = "Yes: " + websiteUrl.value;
+                    }
+                } else if (inspirationNo.checked) {
+                    selectedInspiration = "No";
+                }
+
+
+
+                const selectedLanguages = [];
+                const albanianCheckbox = document.getElementById("albanian");
+                const englishCheckbox = document.getElementById("english");
+                const otherLanguageCheckbox = document.getElementById("otherLanguage");
+
+                if (!companyName || !selectedCategory) {
+                    alert("Please fill out all required fields before calculating the price.");
+                    return;
+                }
+
+                if (albanianCheckbox.checked) {
+                    selectedLanguages.push("Albanian");
+                }
+                if (englishCheckbox.checked) {
+                    selectedLanguages.push("English");
+                }
+                if (otherLanguageCheckbox.checked) {
+                    const otherLanguageText = document.getElementById("otherLanguageText").value;
+                    selectedLanguages.push(otherLanguageText);
+                }
+
+                const deadlineYes = document.getElementById("deadlineYes");
+                const deadlineNo = document.getElementById("deadlineNo");
+                const selectedDeadline = deadlineYes.checked ? "Yes" : "No";
+
+                // Now you can use these variables as needed for calculations, sending emails, etc.
+                // For example, you can print them to the console to verify the values:
+                console.log("Company Name: " + companyName);
+                console.log("Category: " + selectedCategory);
+                console.log("Selected Function: " + selectedFunction);
+                console.log("Inspiration: " + selectedInspiration);
+                console.log("Selected Languages: " + selectedLanguages.join(", "));
+                console.log("Deadline: " + selectedDeadline);
+
+                // Calculate the total price based on the selected function
+                let total = 0;
+                if (selectedCategory && functionPrices[selectedCategory]) {
+                    total = functionPrices[selectedCategory];
+                } else {
+                    totalPriceDiv.textContent = "Please select a category.";
+                    return;
+                }
+
+                selectedFunctions.forEach((selectedFunction) => {
+                    if (extraFunctionPrices[selectedFunction]) {
+                        total += extraFunctionPrices[selectedFunction];
+                    }
+                });
+
+                // Add prices for website languages
+                selectedLanguages.forEach((language) => {
+                    if (languagePrices[language]) {
+                        total += languagePrices[language];
+                    }
+                });
+
+                // Add prices for the two-week deadline
+                if (deadlinePrices[selectedDeadline]) {
+                    total += deadlinePrices[selectedDeadline];
+                }
+
+
+                totalPriceDiv.textContent = "Total Price: $" + total.toFixed(2);
+
+                // Send an email with the calculated price
+                emailjs.send('service_iw40est', 'template_oqjzmyk', {
+                    company_name: companyName,
+                    category: selectedCategory,
+                    selected_function: selectedFunction, // Use the updated variable
+                    selected_inspiration: selectedInspiration,
+                    selected_languages: selectedLanguages.join(", "),
+                    deadline: selectedDeadline,
+                    total_price: total.toFixed(2),
+                }).then(function (response) {
+                    console.log("Email sent successfully", response);
+                    totalPriceDiv.textContent = "Total Price: $" + total.toFixed(2);
+                }, function (error) {
+                    console.error("Email could not be sent", error);
+                });
+
+            });
+        });
+
+        // Enable the input field for "Other" function when the checkbox is selected
+        document.getElementById("otherFunction").addEventListener("change", function () {
+            const otherFunctionText = document.getElementById("otherFunctionText");
+            otherFunctionText.disabled = !this.checked;
+            if (this.checked) {
+                otherFunctionText.focus(); // Automatically focus on the input field when selected
+            }
+        });
+
+        const inspirationYes = document.getElementById("inspirationYes");
+        const inspirationNo = document.getElementById("inspirationNo");
+        const websiteUrlContainer = document.getElementById("websiteUrlContainer");
+
+        inspirationYes.addEventListener("change", function () {
+            websiteUrlContainer.style.display = this.checked ? "block" : "none";
+        });
+
+        inspirationNo.addEventListener("change", function () {
+            websiteUrlContainer.style.display = inspirationYes.checked ? "block" : "none";
+        });
+
+        // Enable the input field for "Other" language when the checkbox is selected
+        document.getElementById("otherLanguage").addEventListener("change", function () {
+            const otherLanguageText = document.getElementById("otherLanguageText");
+            otherLanguageText.disabled = !this.checked;
+            if (this.checked) {
+                otherLanguageText.focus(); // Automatically focus on the input field when selected
+            }
+        });
+    </script>
+</body>
+
+</html>
